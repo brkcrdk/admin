@@ -10,9 +10,9 @@ export default function ProductList() {
     <Container>
       <List>
         <ListItem icon="gem" name="Products" />
-        <ListItem icon="gem" name="Add product" />
-        <ListItem icon="gem" name="Update Product" />
-        <ListItem icon="gem" name="Delete Product" />
+        <ListItem icon="add" name="Add product" />
+        <ListItem icon="edit" name="Update Product" />
+        <ListItem icon="trash alternate" name="Delete Product" />
       </List>
     </Container>
   );

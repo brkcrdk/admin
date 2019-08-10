@@ -3,9 +3,6 @@ import { Accordion } from "semantic-ui-react";
 import AccordionMenu from "./SidebarComponents/AcordionMenu";
 import NormalMenu from "./SidebarComponents/NormalMenu";
 import ProductList from "./ProductList";
-import OrderList from "./OrderList";
-import UserList from "./UserList";
-import AcordionMenu from "./SidebarComponents/AcordionMenu";
 export default function SideMenu() {
   return (
     <>
@@ -17,18 +14,8 @@ export default function SideMenu() {
           content={<ProductList />}
           index="0"
         />
-        <AcordionMenu
-          name="Users"
-          content={<UserList />}
-          index="1"
-          icon="users"
-        />
-        <AcordionMenu
-          name="Orders"
-          content={<OrderList />}
-          index="2"
-          icon="clipboard list"
-        />
+        <NormalMenu icon="users" name="Users" />
+        <NormalMenu icon="clipboard check" name="Orders" />
       </Accordion>
     </>
   );

@@ -7,7 +7,10 @@ export default function NormalMenu(props) {
     padding: 0;
   `;
   const Container = styled.div`
-    margin: 1em 0 0 0;
+    margin: 0;
+    :first-child {
+      margin: 1em 0 0 0;
+    }
   `;
   return (
     <Container>
