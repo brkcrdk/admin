@@ -1,12 +1,17 @@
 import styled from "styled-components";
 import device from "../../device";
-
+import colours from "../../colour";
 import { Icon, Header } from "semantic-ui-react";
-
-export const Container = styled.div`
+import { Link } from "react-router-dom";
+export const Container = styled(Link)`
   display: flex;
   justify-content: center;
   align-items: center;
+  color: black;
+  transition: 0.5s;
+  :hover {
+    color: ${colours.mainBlue};
+  }
   @media ${device.mobileS} {
     padding: 1em;
     margin: 0;

@@ -1,8 +1,10 @@
 import React from "react";
 import SideMenu from "./Sidebar/SideMenu";
-import Dashboard from "./Dashboard/Dashboard";
+
 //REDUX
 import { useSelector } from "react-redux";
+
+import Routes from "./Routes";
 
 //SEMANTİC UI
 import { Container } from "./ContentStyle";
@@ -34,7 +36,7 @@ export default function Content() {
         </Sidebar>
         <SidebarPusher>
           <Segment basic>
-            <Dashboard />
+            <Routes />
           </Segment>
         </SidebarPusher>
       </SidebarPushable>

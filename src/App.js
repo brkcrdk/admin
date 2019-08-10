@@ -1,10 +1,11 @@
 import React from "react";
-import { BrowserRouter as Router, Route } from "react-router-dom";
 import "semantic-ui-css/semantic.min.css";
 import styled from "styled-components";
 import device from "./device";
 import NavBar from "./NavyBar/NavBar";
 import Content from "./Content/Content";
+import { BrowserRouter as Router, Switch } from "react-router-dom";
+
 function App() {
   const Page = styled.div`
     box-sizing: border-box;
@@ -16,12 +17,14 @@ function App() {
   `;
 
   return (
-    <Page className="App">
-      <NavBar />
-      <Router>
-        <Route exact path="/" component={Content} />
-      </Router>
-    </Page>
+    <Router>
+      <Page className="App">
+        <NavBar />
+        <Switch>
+          <Content />
+        </Switch>
+      </Page>
+    </Router>
   );
 }
 
