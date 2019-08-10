@@ -1,25 +1,27 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
-
+import React from "react";
+import { BrowserRouter as Router, Route } from "react-router-dom";
+import "semantic-ui-css/semantic.min.css";
+import styled from "styled-components";
+import device from "./device";
+import NavBar from "./NavyBar/NavBar";
+import Content from "./Content/Content";
 function App() {
+  const Page = styled.div`
+    box-sizing: border-box;
+    margin: auto;
+    padding: 0;
+    @media ${device.desktop} {
+      max-width: 1400px;
+    }
+  `;
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Page className="App">
+      <NavBar />
+      <Router>
+        <Route exact path="/" component={Content} />
+      </Router>
+    </Page>
   );
 }
 
