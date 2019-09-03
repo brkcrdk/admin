@@ -1,6 +1,5 @@
 import styled from "styled-components";
 import device from "../device";
-
 export const Container = styled.div`
   border: none;
   /* Sidelist height */

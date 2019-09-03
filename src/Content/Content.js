@@ -1,6 +1,5 @@
 import React from "react";
 import SideMenu from "./Sidebar/SideMenu";
-
 //REDUX
 import { useSelector } from "react-redux";
 
